@@ -30,7 +30,7 @@ const ModulesPage = ({ params }: { params: { modules: string } }) => {
   };
 
   return (
-    <div className="">
+    <div>
       <div className="flex gap-2 items-center">
         <h2 className="font-medium text-2xl text-white">
           Bienvenido al módulo {params.modules}
@@ -45,7 +45,7 @@ const ModulesPage = ({ params }: { params: { modules: string } }) => {
       </div>
       {/* <h3 className="my-2 text-xl text-white">Clases:</h3> */}
       <h3 className="my-2 text-xl text-white">Clases:</h3>
-      <section className="flex flex-wrap gap-5 py-5justify-center items-center flex-col md:flex-row text-black">
+      <section className="flex flex-wrap gap-5 py-5justify-center items-center flex-col md:flex-row text-black my-5">
         {classes.map(
           (res: { name: Key | null | undefined; id: any; image: string }) => (
             <Link
@@ -59,7 +59,7 @@ const ModulesPage = ({ params }: { params: { modules: string } }) => {
       </section>
       {complements.length && (
         <section>
-          <h3 className="my-2 text-xl text-white">Complementos:</h3>
+          <h3 className="my-5 text-xl text-white">Complementos:</h3>
           <div className="flex flex-wrap gap-3 justify-center md:justify-start">
             {complements.map((res, i) => (
               <a key={i} href={res.src} download>

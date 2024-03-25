@@ -18,6 +18,8 @@ const UserDashboard = ({ user, key }: Props) => {
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
 
+  console.log(role);
+
   const openModal = () => {
     setIsOpen(true);
   };
@@ -38,7 +40,7 @@ const UserDashboard = ({ user, key }: Props) => {
       await update({ ...session, user: { ...session?.user } });
       dispatch(fetchUsersAsync());
       if (res.data.status === "approved") {
-        await axios.post("/api/send-mail-user");
+        await axios.post("/api/send-mail-user", { name, email });
       }
     } catch (e) {
       console.log(e);
@@ -86,7 +88,11 @@ const UserDashboard = ({ user, key }: Props) => {
         <button
           onClick={openModal}
           // onClick={() => handleAccept(email, "approved", "admin")}
-          className={`bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-2xl transition duration-500 ease-in-out`}
+          className={`${
+            role !== "admin"
+              ? "text-blue-400 border-blue-300 hover:text-blue-500 hover:border-blue-500 border-2"
+              : "bg-blue-500 hover:bg-blue-600 text-white"
+          }  font-bold py-2 px-4 mr-2 rounded-2xl transition duration-500 ease-in-out`}
         >
           Admin
         </button>

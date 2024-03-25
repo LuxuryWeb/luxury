@@ -21,7 +21,7 @@ const handler = NextAuth({
 
         if (!userExists) {
           // const res = await fetch("https://www.luxurygold.click/api/user", {
-          const res = await fetch("https://www.luxurygold.click/api/user", {
+          const res = await fetch("http://localhost:3000/api/user", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -35,11 +35,12 @@ const handler = NextAuth({
           });
 
           if (res.ok) {
-            await fetch("https://www.luxurygold.click/api/send-mail-admin", {
+            await fetch("http://localhost:3000/api/send-mail-admin", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
               },
+              body: JSON.stringify({ name, email }),
             });
             return user;
           }

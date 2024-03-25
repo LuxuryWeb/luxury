@@ -1,6 +1,7 @@
 export const modulos = [
   {
     link: "shopify",
+    image: "/imgs/shopify.webp",
     name: "Shopify",
     classes: [
       {
@@ -99,6 +100,7 @@ export const modulos = [
   },
   {
     link: "liberacion",
+    image: "/imgs/releasit.webp",
     name: "Liberación",
     classes: [
       {
@@ -125,120 +127,79 @@ export const modulos = [
   },
   {
     link: "facebook",
+    image: "/imgs/facebook.webp",
     name: "Facebook",
     classes: [
       {
         id: "1",
-        name: "3 Bienvenidos a la mentoria",
+        name: "1 Creando fanpage",
         image: "/imgs/facebook/cap1.webp",
         src: "https://youtu.be/eC9vbSt9veY",
         video: true,
       },
       {
         id: "2",
-        name: "2 Bienvenidos a la mentoria",
+        name: "2 Conectando facebook con shopify",
         image: "/imgs/facebook/cap2.webp",
         src: "https://youtu.be/FBU0n73rCdU",
         video: true,
       },
       {
         id: "3",
-        name: "3 Bienvenidos a la mentoria",
+        name: "3 Configurando gerente comercial",
         image: "/imgs/facebook/cap3.webp",
         src: "https://youtu.be/nma9Ycj2qkw",
         video: true,
       },
       {
         id: "4",
-        name: "4 Bienvenidos a la mentoria",
+        name: "4 Como verificar el dominio",
         image: "/imgs/facebook/cap4.webp",
         src: "https://youtu.be/MpPKShU05vY",
         video: true,
       },
       {
         id: "5",
-        name: "5 Bienvenidos a la mentoria",
+        name: "5 Metricas de facebook",
         image: "/imgs/facebook/cap5.webp",
         src: "https://youtu.be/YxMElvCfnKo",
         video: true,
       },
       {
         id: "6",
-        name: "6 Bienvenidos a la mentoria",
+        name: "6 Estrategia 1 - Testeo Advantage",
         image: "/imgs/facebook/cap6.webp",
         src: "https://youtu.be/HbvrJYCTK2c",
         video: true,
       },
       {
         id: "7",
-        name: "7 Bienvenidos a la mentoria",
+        name: "7 Estrategia 2 - Testeo Manual",
         image: "/imgs/facebook/cap7.webp",
-        src: "/videos/class-1.mp4",
+        src: "https://youtu.be/5rk1iDMA2sA",
         video: true,
       },
     ],
   },
   {
-    link: "drop",
+    link: "dropi",
+    image: "/imgs/dropi.webp",
     name: "Dropi",
     classes: [
       {
         id: "1",
-        name: "1 Bienvenidos a la mentoria",
-        image: "/imgs/dropi/cap1.webp",
-        src: "/videos/class-1.mp4",
+        name: "1 Transportadoras",
+        image: "/imgs/dropi/cap2.webp",
+        src: "https://youtu.be/bW68ORFaxEs",
         video: true,
       },
       {
-        id: "7",
-        name: "2 Bienvenidos a la mentoria",
+        id: "2",
+        name: "2 Direcciones",
         image: "/imgs/dropi/cap2.webp",
-        src: "/videos/class-1.mp4",
+        src: "https://youtu.be/RjSlRNF3XHI",
         video: true,
       },
     ],
   },
 ];
-
-// export const modulos = [
-//   {
-//     link: "modulo-1",
-//     name: "Modulo 1",
-//     classes: [
-//       {
-//         name: "1 Bienvenidos a la mentoria",
-//         src: "/videos/class-1.mp4",
-//       },
-//     ],
-//   },
-//   {
-//     link: "modulo-2",
-//     name: "Modulo 2",
-//     classes: [
-//       {
-//         name: "2 Bienvenidos a la mentoria",
-//         src: "/videos/class-1.mp4",
-//       },
-//     ],
-//   },
-//   {
-//     link: "modulo-3",
-//     name: "Modulo 3",
-//     classes: [
-//       {
-//         name: "3 Bienvenidos a la mentoria",
-//         src: "/videos/class-1.mp4",
-//       },
-//     ],
-//   },
-//   {
-//     link: "modulo-4",
-//     name: "Modulo 4",
-//     classes: [
-//       {
-//         name: "4 Bienvenidos a la mentoria",
-//         src: "/videos/class-1.mp4",
-//       },
-//     ],
-//   },
-// ];

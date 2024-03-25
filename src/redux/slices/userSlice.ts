@@ -41,9 +41,7 @@ export const { fetchUsersStart, fetchUsersSuccess, fetchUsersFailure } =
 export const fetchUsersAsync = (): any => async (dispatch: Dispatch) => {
   try {
     dispatch(fetchUsersStart());
-    const { data } = await axios.post(
-      "https://www.luxurygold.click/api/getusers"
-    );
+    const { data } = await axios.post("http://localhost:3000/api/getusers");
     console.log(data);
     if (!data) {
       throw new Error("Failed to fetch users");
