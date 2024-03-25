@@ -37,7 +37,7 @@ const ModulesPage = ({ params }: { params: { modules: string } }) => {
           {/* <span className="font-normal capitalize">{params.modules}</span> */}
         </h2>
         <Image
-          src={`/imgs/${params.modules}.webp`}
+          src={`/imgs/${params.modules + "Logo"}.webp`}
           alt="logo"
           width={24}
           height={24}
