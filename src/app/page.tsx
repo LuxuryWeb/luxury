@@ -16,11 +16,11 @@ export default function Home() {
           </h2>
           <div className="background bg-zinc-800 w-full  lg:px-40 lg:py-8 flex flex-col gap-5">
             <Image
-              src="/imgs/logo.png"
+              src="/imgs/home.png"
               alt="logo"
-              width={600}
+              width={500}
               height={600}
-              className=""
+              className="max-w-[300px] max-h-[300px]"
             />
           </div>
           <h3 className="background bg-zinc-800 py-4 w-full text-lg text-center">

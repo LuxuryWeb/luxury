@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="w-full h-full flex flex-col items-center justify-center text-black mx-auto py-3 pb-6 lg:px-0">
-      <nav className="w-full flex justify-between">
+      <nav className="w-full flex items-center justify-between">
         {router !== "/" ? (
           <Link href="/">
             <div className="md:px-1 ">

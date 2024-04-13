@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="es">
       <head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link rel="icon" href="/icon.ico" sizes="any" />
+        <link rel="icon" href="/icon2.ico" sizes="any" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"

@@ -31,6 +31,16 @@ export const modulos = [
         image: "/imgs/shopify/cap4.webp",
         src: "https://youtu.be/x83D0FL5w3s",
         video: true,
+        component: [
+          {
+            type: "png",
+            src: "/shopify/complementos/Configurando-shopify-nosotros.png",
+          },
+          {
+            type: "zip",
+            src: "/shopify/complementos/Plantilla-optimizada-Mentoria-configurando-shopify.zip",
+          },
+        ],
       },
       {
         id: "5",
@@ -38,6 +48,10 @@ export const modulos = [
         image: "/imgs/shopify/cap5.webp",
         src: "https://youtu.be/My7cSzkvtMo",
         video: true,
+        component: {
+          type: "pdf",
+          src: "/shopify/complementos/Politicas-de-la-tienda.pdf",
+        },
       },
       {
         id: "6",
@@ -59,6 +73,10 @@ export const modulos = [
         image: "/imgs/shopify/cap8.webp",
         src: "https://youtu.be/b4nQUoRVuVU",
         video: true,
+        component: {
+          type: "xlsx",
+          src: "/shopify/complementos/CALCULADORA-DE-PRECIOS.xlsx",
+        },
       },
       {
         id: "9",
@@ -115,6 +133,17 @@ export const modulos = [
         name: "2 Confirmación por whatsapp",
         image: "/imgs/releasit/cap2.webp",
         src: "https://youtu.be/BacjAYOubU0",
+        video: true,
+        complement: {
+          type: "docx",
+          src: "/releasit/complementos/Confirmacion-What.docx",
+        },
+      },
+      {
+        id: "3",
+        name: "3 Confirmación por whatsapp",
+        image: "/imgs/releasit/cap2.webp",
+        src: "https://firebasestorage.googleapis.com/v0/b/next-firebase-a80b4.appspot.com/o/files%2F1%20Bienvenidos%20a%20la%20mentoria.mp4?alt=media&token=8fbd4701-f1c5-49ae-a460-caeb83507fed",
         video: true,
       },
     ],
