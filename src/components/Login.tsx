@@ -30,11 +30,11 @@ const Login = () => {
                   <p>{session.user.email}</p>
                 </div>
                 <Image
-                  src={session.user.image as string}
+                  src="/imgs/person.png"
                   width={24}
                   height={24}
                   alt={session.user.name as string}
-                  className="w-10 h-10 rounded-full"
+                  className="w-10 h-10 rounded-full bg-gold p-[2px]"
                 />
               </div>
             </div>

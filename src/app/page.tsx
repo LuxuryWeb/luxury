@@ -12,7 +12,7 @@ export default function Home() {
       <section className="flex h-full text-white flex-col items-center justify-center sm:justify-start">
         <div className="flex flex-col items-center justify-center gap-5 ">
           <h2 className="pt-8 text-2xl sm:text-5xl text-center">
-            Bienvenidos a{" "}
+            Bienvenidos a
           </h2>
           <div className="background bg-zinc-800 w-full  lg:px-40 lg:py-8 flex flex-col gap-5">
             <Image
@@ -20,7 +20,7 @@ export default function Home() {
               alt="logo"
               width={500}
               height={600}
-              className="max-w-[300px] max-h-[300px]"
+              className="max-w-[400px] max-h-[300px] rounded-lg"
             />
           </div>
           <h3 className="background bg-zinc-800 py-4 w-full text-lg text-center">

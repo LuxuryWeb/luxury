@@ -11,18 +11,18 @@ const Profile = () => {
 
   return (
     <ProtectedRoute requiresAuth={true} profile={true}>
-      <section className="w-full flex items-center justify-center p-1 sm:px-28">
-        <div className="w-full h-full bg-zinc-800 text-white rounded-xl">
+      <section className="w-full flex items-center justify-center p-1">
+        <div className="w-full h-full bg-zinc-800 text-white rounded-3xl">
           {!session ? (
             <Loader />
           ) : (
             <div className=" flex flex-col justify-center items-center p-10 gap-5">
               <Image
-                src={session.user.image}
+                src="/imgs/person.png"
                 alt="user"
                 width="200"
                 height="200"
-                className="rounded-full object-cover p-8 md:p-2 xl:p-0"
+                className="w-full h-full max-w-[120px] max-h-[120px] sm:max-w-[200px] sm:max-h-[200px] rounded-full bg-gold p-[2px]"
               />
               <div className="flex flex-col items-center justify-center">
                 <p className="text-lg font-bold">Nombre</p>
