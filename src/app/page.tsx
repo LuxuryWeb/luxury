@@ -14,16 +14,16 @@ export default function Home() {
           <h2 className="pt-8 text-2xl sm:text-5xl text-center">
             Bienvenidos a
           </h2>
-          <div className="background bg-zinc-800 w-full  lg:px-40 lg:py-8 flex flex-col gap-5">
+          <div className=" w-full lg:px-40 lg:py-8 flex flex-col gap-5">
             <Image
               src="/imgs/home.png"
               alt="logo"
-              width={500}
-              height={600}
-              className="max-w-[400px] max-h-[300px] rounded-lg"
+              width={1000}
+              height={1000}
+              className="max-w-[500px] max-h-[500px] rounded-lg"
             />
           </div>
-          <h3 className="background bg-zinc-800 py-4 w-full text-lg text-center">
+          <h3 className="background bg-zinc-800 py-4 w-full max-w-[500px] text-lg text-center">
             Que estas esperando para dar un salto en tu carrera!
           </h3>
 
