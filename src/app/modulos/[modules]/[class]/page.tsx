@@ -1,15 +1,33 @@
-"use client";
 import VideoPlayer from "@/components/VideoPlayer";
 import { modulos } from "../../../../../utils/modulos";
 import Image from "next/image";
+import { cache } from "react";
+import { prisma } from "@/app/lib/prisma";
 
-const ClassPage = ({ params }: any) => {
-  const classes =
-    modulos.find((modulo) => modulo.link === params.modules)?.classes || [];
+export const revalidate = 3600 
 
-  const idPath = params.class.split("_")[1];
+const getData = cache(async (id: string) => {
+  const classes = await prisma.classes.findFirst({
+    where: {
+      id: {
+        equals: id
+      }
+    },
+    relationLoadStrategy: 'join',
+    include: {
+      components: true
+    }
+  });
 
-  const clase = classes.find((clas) => clas.id === idPath) as any;
+  return { classes }
+})
+
+const ClassPage = async ({ params }: { params: { class: string } }) => {
+  const { class: id } = params;
+  const data = await getData(id)
+  const { classes } = data
+  console.log(classes);
+  
 
   const getIconImg = (img: string) => {
     switch (img) {
@@ -32,21 +50,21 @@ const ClassPage = ({ params }: any) => {
     <section className="w-full h-full  flex flex-col justify-center items-center text-white gap-5">
       <section className="w-full h-full flex flex-col justify-center items-center mb-2">
         <div className="w-full h-full flex justify-center items-center">
-          {clase.video ? (
-            <VideoPlayer src={clase.src} />
+          {classes?.video ? (
+            <VideoPlayer src={classes.src.startsWith('http') ? classes.src : 'https://upload.luxurygold.click' + classes.src} />
           ) : (
-            <iframe src={clase.src} width="100%" height="100%"></iframe>
+            <iframe src={classes?.src} width="100%" height="100%"></iframe>
           )}
         </div>
       </section>
-      {clase.component && (
+      {classes?.components && classes?.components.length > 0 && (
         <div className="w-full justify-start">
           <h3>
-            {Array.isArray(clase.component) ? "Complementos" : "Complemento"}
+            {classes.components.length > 1 ? "Complementos" : "Complemento"}
           </h3>
           <div className="my-5 flex w-full gap-5">
-            {Array.isArray(clase.component) && clase.component.length > 0 ? (
-              clase.component.map((res: any, i: any) => (
+            {Array.isArray(classes.components) && classes.components.length > 0 && (
+              classes.components.map((res: any, i: any) => (
                 <div key={i} className="">
                   <a href={res.src} download>
                     <button className="bg-zinc-200 hover:bg-slate-400 hover:text-white text-slate-800 font-bold py-10 px-10 rounded-xl transition duration-500 ease-in-out relative z-10">
@@ -67,26 +85,6 @@ const ClassPage = ({ params }: any) => {
                   </a>
                 </div>
               ))
-            ) : (
-              <div className="w-full justify-start">
-                <a href={clase.component.src} download>
-                  <button className="bg-zinc-200 hover:bg-slate-400 hover:text-white text-slate-800 font-bold py-10 px-10 rounded-xl transition duration-500 ease-in-out relative z-10">
-                    <Image
-                      height={40}
-                      width={40}
-                      src={getIconImg(clase.component.type)}
-                      alt={getIconImg(clase.component.type)}
-                    />
-                    <Image
-                      height={28}
-                      width={28}
-                      src="/imgs/download.png"
-                      alt="Imagen Descarga Hover"
-                      className="absolute inset-0 w-full h-full p-7 object-cover rounded-xl opacity-0 transition-opacity duration-500 ease-in-out hover:opacity-50 transform scale-125 hover:scale-90 transition-transform duration-2000 ease-in-out"
-                    />
-                  </button>
-                </a>
-              </div>
             )}
           </div>
         </div>
