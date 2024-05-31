@@ -1,4 +1,5 @@
 import VideoPlayer from "@/components/VideoPlayer";
+import IframeCustom from "@/components/IframeCustom";
 import { modulos } from "../../../../../utils/modulos";
 import Image from "next/image";
 import { cache } from "react";
@@ -53,7 +54,7 @@ const ClassPage = async ({ params }: { params: { class: string } }) => {
           {classes?.video ? (
             <VideoPlayer src={classes.src.startsWith('http') ? classes.src : 'https://upload.luxurygold.click' + classes.src} />
           ) : (
-            <iframe src={classes?.src} width="100%" height="100%"></iframe>
+            <IframeCustom src={classes?.src}></IframeCustom>
           )}
         </div>
       </section>
